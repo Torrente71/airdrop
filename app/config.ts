@@ -1,0 +1,13 @@
+const PINATA_ACCESS_TOKEN = process.env.PINATA_SECRET_ACCESS_KEY;
+const PINATA_API_KEY = process.env.PINATA_API_KEY;
+const PINATA_SECRET = process.env.PINATA_SECRET;
+const PINATA_GROUP_ID = process.env.PINATA_GROUP_ID;
+const GATEWAY_URL = process.env.VITE_GATEWAY_URL;
+
+export const config = {
+	...(PINATA_ACCESS_TOKEN && { PINATA_ACCESS_TOKEN }),
+	PINATA_API_KEY,
+	PINATA_SECRET,
+	PINATA_GROUP_ID,
+	GATEWAY_URL,
+};
